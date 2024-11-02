@@ -1,0 +1,95 @@
+<?php
+$values = array(
+	'text_color'				=> '#000',
+	'text_align'				=> 'left',
+	'title_color'				=> '#000',
+	'title_align'				=> 'left',
+	'title_size'				=> '1em',
+	'grid_item_width'			=> '33%',
+);
+
+$v = array_merge($values,$_GET);
+
+?>
+@charset "UTF-8";
+
+.bol-products {
+	list-style: none;
+	color: <?php print $v['text_color'];?>;
+	text-align: <?php print $v['text_align'];?>;
+}
+.bol-products.-grid ._product {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+
+	display: inline-block;
+	width: <?php print $v['grid_item_width']?>;
+	padding: 2%;
+	vertical-align: top;
+}
+.widget-wrap .bol-products.-grid ._product {
+	display: block;
+	width: auto;
+}
+
+.bol-products ._title {
+	color: <?php print $v['title_color'];?>;
+	font-size: <?php print $v['title_size'];?>;
+	margin-bottom: .5em;
+	text-align: <?php print $v['title_align'];?>;
+}
+.bol-products .-product-image {
+	border: none;
+	display: block;
+}
+.bol-products .-product-image._align-left {
+	float: left;
+	margin-right: .5em;
+}
+.bol-products .-product-image._align-center {
+	text-align: center;
+}
+.bol-products .-product-image._align-right {
+	float: right;
+	margin-left: .5em;
+}
+.bol-products .-product-image._size-ExtraLarge .-image {
+	display: block;
+	width: 100%;
+}
+.bol-products ._product {
+	overflow: hidden;
+	margin-bottom: 1em;
+	padding-right: 1em;
+}
+.widget-wrap .bol-products ._product {
+	border-top: 1px solid <?php print $v['text_color'];?>;
+	padding-top: 1em;
+}
+.widget-wrap .bol-products ._product:first-child {
+	border: none;
+	padding-top: 0;
+}
+.bol-products .-author {
+	font-style: italic;
+	margin-bottom: .5em;
+}
+.bol-products .-offer {
+	font-size: <?php print $v['price_size'];?>;
+	color: <?php print $v['price_color'];?>;
+	margin-left: .5em;
+	display: block;
+	text-align: left;
+}
+.bol-products .-offer._align-left {
+	float: left;
+	margin-right: .5em;
+}
+.bol-products .-offer._align-center {
+	text-align: center;
+}
+.bol-products .-offer._align-right {
+	float: right;
+	margin-left: .5em;
+}
